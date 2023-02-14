@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --foreground-1: #000000;
+    --foreground-2: #d6d6d6;
+
+    --background-1: #ffffff;
+
+    --transparency-1: rgba(255 255 255 / 0.72);
+
+    --accent-1: rgb(0 148 255);
+
+    --gradient-45: linear-gradient(45deg, rgba(0, 148, 255, 1) 0%, rgba(72, 0, 255, 1) 100%);
+    --gradient-90: linear-gradient(90deg, rgba(0, 148, 255, 1) 0%, rgba(72, 0, 255, 1) 100%);
+
+    --font-family: 'Space Grotesk', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: var(--font-family);
+    color: #2c3e50;
+    background: rgb(0, 148, 255);
+    background: var(--gradient-90);
+}
+
+nav {
+    width: 100vw;
+    line-height: 130%;
+    position: sticky;
+    top: 0;
+    background: var(--transparency-1);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 100;
+    border-bottom: 1px solid var(--foreground-2);
+}
+
+nav * {
+    color: black;
+}
+
+nav > .nav {
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    width: 75vw;
+    padding-bottom: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav > .nav .logo {
+    height: 2rem;
+    width: 2rem;
+}
+
+nav > .nav .links {
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav > .nav .links button {
+    background: var(--gradient-90);
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+nav > .nav .links button:hover {
+    filter: brightness(90%);
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(0, 148, 255);
+    background: var(--gradient-90);
+    color: white;
+}
+
+header > div {
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; filter: blur(2rem); }
+    to { opacity: 1; }
+}
+
+header > div h1 {
+    font-size: 6rem;
+}
+
+main {
+    color: var(--foreground-1);
+    background: var(--background-1);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+main > section h2 {
+    margin-left: 2rem;
+}
+
+main > section > .content {
+    margin: 1rem;
+}
+
+main > #products > .cards {
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+main > #products > .cards .card {
+    border-radius: 1rem;
+    border: 0.1rem solid var(--foreground-2);
+    padding: 1rem;
+}
+
+main > #products > .cards .card > h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main > #products > .cards .card > h3 a {
+    color: #39c;
+    text-decoration: underline;
+}
+
+main > #products > .cards .card > h3 a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background: black;
+    color: #888888;
+    padding: 2rem 6rem;
+}
+
+footer > .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > .content .links {
+    display: flex;
+    gap: 1rem;
+}
+
+footer > .content .links a {
+    color: #888888;
+}
+
+footer > .content .links a:hover {
+    text-decoration: none;
+}
